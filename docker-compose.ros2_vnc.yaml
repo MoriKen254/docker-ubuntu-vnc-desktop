@@ -1,15 +1,15 @@
 version: '3'
 
 services:
-  ubuntu_cuda_vnd:
-    container_name: ubuntu_cuda_vnd
+  ubuntu_cuda_vnc:
+    container_name: ubuntu_cuda_vnc
     build:
       context: .
       dockerfile: Dockerfile.amd64
     shm_size: 256m
     privileged: true
     ports:
-      - "6085:80"
+      - "6080:80"
     deploy:
       resources:
         reservations:
